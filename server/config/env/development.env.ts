@@ -1,12 +1,24 @@
 module.exports = {
+    app: 'Typescript Api',
     env: 'development',
-    db: 'ts-api',
-    dialetc: 'mysql',
-    username: 'paulopanissa',
-    password: 'secret',
-    host: 'localhost',
-    mysqlPort: 3306,
     serverPort: 5200,
-    dbURL: 'mysql://paulopanissa:secret@localhost:3306/ts-api',
-    secret: 'S3cr3t'
+    salt: 'S3cr3t',
+    mysql: {
+        db: 'ts-api',
+        dialetc: 'mysql',
+        username: 'paulopanissa',
+        password: 'secret',
+        host: 'localhost',
+        port: 3306,
+        dbURL: 'mysql://paulopanissa:secret@localhost:3306/ts-api',
+    },
+    sqlserver: {
+        db: 'dbo.SiplanGeral',
+        dialetc: 'mssql',
+        username: 'SIPLAN',
+        password: 'redondo',
+        host: '192.168.1.222',
+        port: 3306,
+        dbURL: 'mysql://paulopanissa:secret@localhost:3306/ts-api',
+    }
 }

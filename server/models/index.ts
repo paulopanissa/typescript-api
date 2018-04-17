@@ -9,10 +9,11 @@ const env       = config.env || 'development';
 const db:any        = {};
 
 let sequelize:any = {};
-if (config.dbURL) {
-  sequelize = new Sequelize(config.dbURL);
+
+if (config.mysql.dbURL) {
+  sequelize = new Sequelize(config.mysql.dbURL);
 } else {
-  sequelize = new Sequelize(config.db, config.username, config.password);
+  sequelize = new Sequelize(config.mysql.db, config.mysql.username, config.mysql.password);
 }
 
 fs
